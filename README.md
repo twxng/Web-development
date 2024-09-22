@@ -1,9 +1,16 @@
-# React + Vite
+Лабораторна робота №2
+Тема роботи: «Стан і життєвий цикл React компонентів»
+Мета роботи: Вивчення та застосування на практиці state management та життєвого циклу класових компонентів React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Завдання на ЛР2:
+-	Перетворити створені компоненти на елементи сайту(шапка, тіло, нижня частина, меню) (якщо це не було зроблено)
+-	Створити список елементів (товарів наприклад) в App.js (це тимчасово)
+-	Передати список та створити на його основі компоненти з можливістю натиснути checkbox для обирання товару
+-	Кількість обраних товарів передавати через callback в компоненту яка в собі містить компоненти з товарами ( можна зверху справа лічильник)
+-	Реалізувати в окремі компоненти кнопки для входу та виходу (з вікном входу) які змінюють один одного за допомогою state в app.js та за допомогою props та callback передаються в компоненту меню (або шапки, тут за бажанням щодо розміщення кнопки)
+Теоретичні питання:
+-	Що таке state
+-	Що таке callback та props, у чому головні відмінності?
+-	Чому не можна змінювати props за допомогою this.props.element =
+-	В чому різниця між ComponentWillMount та ComponentWillUnmount
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Web-development
