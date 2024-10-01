@@ -69,7 +69,9 @@ function Navbar({
               style={{
                 display: "flex",
                 alignItems: "center",
-                marginRight: "0px",
+                marginRight: "10px",
+								marginLeft: "10px",
+
               }}
             >
               <Icon
