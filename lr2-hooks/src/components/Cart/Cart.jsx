@@ -31,7 +31,7 @@ function Cart({
       </h2>
       <div className="cart-items">
         {products.length === 0 ? (
-          <p align="center">Your shopping cart is empty.</p>
+          <p align="center">Your shopping cart is empty</p>
         ) : (
           products.map((product, index) => (
             <div key={index} className="cart-item">
