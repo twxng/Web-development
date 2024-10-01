@@ -1,0 +1,112 @@
+.card {
+  width: 18%;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.055);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -300px;
+}
+
+.card-image {
+  height: 200px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  white-space: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.add-to-favorite {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-label {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-checkbox:checked + .custom-label {
+  transform: scale(1.2);
+  color: red;
+}
+
+.buy {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+span {
+  width: 200px;
+  height: 30px;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
