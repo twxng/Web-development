@@ -12,7 +12,6 @@
     "prebuild": "npm run clean"
   },
   "dependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.22.4",
     "flowbite-react": "^0.10.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
