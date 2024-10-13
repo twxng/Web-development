@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "../Card/Card.jsx";
 import ProductDetail from "../Details/ProductDetail.jsx";
+import PropTypes from 'prop-types';
 
 function List({
   products,
@@ -8,6 +9,7 @@ function List({
   currentUser,
   convertCurrency,
   currency,
+  selectedProductIds,
 }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [history, setHistory] = useState([]);
@@ -82,6 +84,7 @@ function List({
                   onCardClick={handleCardClick}
                   convertCurrency={convertCurrency}
                   currency={currency}
+                  isSelected={selectedProductIds.includes(product.name)}
                 />
               );
             })}
@@ -92,4 +95,12 @@ function List({
   );
 }
 
+List.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onCheckboxChange: PropTypes.func.isRequired,
+  currentUser: PropTypes.object.isRequired,
+  convertCurrency: PropTypes.func.isRequired,
+  currency: PropTypes.string.isRequired,
+  selectedProductIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 export default List;

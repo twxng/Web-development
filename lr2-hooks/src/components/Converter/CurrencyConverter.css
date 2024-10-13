@@ -1,0 +1,46 @@
+.currency-converter {
+  background-color: #1a1a1a83;
+  border: 1px solid #ff1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.28);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+.currency-converter h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.currency-converter input,
+.currency-converter select {
+  /* border: 1px solid #ff1a1a79; */
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 5px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(40, 17, 17, 0.295);
+}
+
+.currency-converter button {
+  background-color: #740000;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.currency-converter button:hover {
+  background-color: #cc0000;
+}
+

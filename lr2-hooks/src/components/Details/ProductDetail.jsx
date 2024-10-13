@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState} from "react";
 import { Icon } from "@iconify/react";
 import "../Details/detail.css";
+import PropTypes from 'prop-types';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 function ProductDetail({
   product,
@@ -12,14 +14,8 @@ function ProductDetail({
 }) {
   const [comment, setComment] = useState("");
   const [username, setUsername] = useState("");
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useLocalStorage(`comments-${product.name}`, []);
   const displayPrice = convertCurrency(product.price).toFixed(2);
-
-  useEffect(() => {
-    const savedComments =
-      JSON.parse(localStorage.getItem(`comments-${product.name}`)) || [];
-    setComments(savedComments);
-  }, [product.name]);
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -51,10 +47,6 @@ function ProductDetail({
       setComments(newComments);
       setComment("");
       if (!currentUser) setUsername("");
-      localStorage.setItem(
-        `comments-${product.name}`,
-        JSON.stringify(newComments)
-      );
     }
   };
 
@@ -156,5 +148,23 @@ function ProductDetail({
     </div>
   );
 }
+
+ProductDetail.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    material: PropTypes.string.isRequired,
+    size: PropTypes.arrayOf(PropTypes.string).isRequired,
+    color: PropTypes.string.isRequired,
+  }).isRequired,
+  onBack: PropTypes.func.isRequired,
+  onForward: PropTypes.func,
+  currentUser: PropTypes.shape({
+    name: PropTypes.string,
+  }),
+  convertCurrency: PropTypes.func.isRequired,
+  currency: PropTypes.string.isRequired,
+};
 
 export default ProductDetail;

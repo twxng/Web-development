@@ -1,3 +1,42 @@
-*{
-	font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.context-menu {
+  position: fixed;
+  border: 1px solid #ff1a1a;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.28);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+.context-menu button {
+  background-color: transparent;
+  color: #ff1a1a;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.context-menu button:hover {
+  color: #ffffff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
 }

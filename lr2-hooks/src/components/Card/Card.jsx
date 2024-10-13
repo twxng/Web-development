@@ -1,7 +1,6 @@
-import React from "react";
+import PropTypes from 'prop-types';
 import "../Card/card.css";
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
 
 function Card({
   product,
@@ -9,14 +8,9 @@ function Card({
   onCardClick,
   convertCurrency,
   currency,
+  isSelected,
 }) {
-  if (
-    !product ||
-    !onCheckboxChange ||
-    !onCardClick ||
-    !convertCurrency ||
-    !currency
-  ) {
+  if (!product || !onCheckboxChange || !onCardClick || !convertCurrency || !currency) {
     console.error("Missing required props in Card component", {
       product,
       onCheckboxChange,
@@ -26,6 +20,7 @@ function Card({
     });
     return null;
   }
+
   const displayPrice = convertCurrency(product.price).toFixed(2);
 
   return (
@@ -62,6 +57,7 @@ function Card({
           id={`checkbox-${product.name}`}
           className="custom-checkbox"
           onChange={() => onCheckboxChange(product)}
+          checked={isSelected}
         />
         <label htmlFor={`checkbox-${product.name}`} className="custom-label">
           <Icon icon="ic:twotone-add-shopping-cart" width="20" />
@@ -70,5 +66,18 @@ function Card({
     </div>
   );
 }
+
+Card.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
+  onCheckboxChange: PropTypes.func.isRequired,
+  onCardClick: PropTypes.func.isRequired,
+  convertCurrency: PropTypes.func.isRequired,
+  currency: PropTypes.string.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+};
 
 export default Card;
