@@ -1,0 +1,112 @@
+.card {
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.048);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: none;
+}
+
+.add-to-favorite {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  cursor: pointer;
+  color: #ff0000;
+  transition: color 0.3s ease;
+}
+
+.add-to-favorite:active,
+.add-to-favorite.selected {
+  color: #ff0000;
+}
+
+.product-description {
+  position: relative;
+  width: 100%;
+}
+
+.image-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.card-details {
+  margin-top: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.price {
+  color: #ff4040;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.buy {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.buy:active {
+
+  color: #ff4040;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-label {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+
+.custom-checkbox:checked + .custom-label {
+  color: #ff4040;
+}
+
+.custom-checkbox:checked + .custom-label svg {
+  color: #ff4040;
+}
