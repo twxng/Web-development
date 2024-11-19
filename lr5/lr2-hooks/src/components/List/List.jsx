@@ -49,7 +49,7 @@ function List({ products }) {
       ) : (
         <>
           <img
-            src="/src/assets/red.png"
+            src="/assets/red.png"
             alt="Red"
             className="mx-auto mb-8"
             style={{ width: "15%", height: "auto", marginTop: "-220px" }}

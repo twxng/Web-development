@@ -11,7 +11,7 @@ function Jumbotron() {
       <section>
         <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
           <img
-            src="src/assets/red.png"
+            src="assets/red.png"
             alt="Red"
             className="mx-auto mb-8"
             style={{ width: "20%", height: "auto", marginTop: "-200px" }}

@@ -1,7 +1,7 @@
 :root {
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
-	background-image: url('src/assets/oooscillate.svg');
+	background-image: url('/assets/oooscillate.svg');
 	background-size: cover;
 	background-repeat: no-repeat;
 
